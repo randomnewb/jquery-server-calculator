@@ -1,11 +1,14 @@
 ## To-Do
 
 # Initialization To-Do
-- [ ] Setup file directory
-- [ ] Setup index.html, client.js, server.js, style.css
-- [ ] Source js and css files
-- [ ] `npm init --y`
-- [ ] `npm install express`
+- [x] Setup file directory
+- [x] Setup index.html, client.js, server.js, style.css
+- [x] Source js and css files
+- [x] `npm init --y`
+- [x] `npm install express`
+- [x] Add "start": "node server/server.js" to package.json
+
+- [x] Complete remaining server.js code
 
 ## GET Requests
 
@@ -26,9 +29,9 @@
 # User Input and Interaction To-Do
 
 In index.html
-- [ ] Create two input fields 
-- [ ] In-between the input fields, add 4 basic operations (+ - * /)
-- [ ] Add a submit (`=`) button
+- [x] Create two input fields 
+- [x] In-between the input fields, add 4 basic operations (+ - * /)
+- [x] Add a submit (`=`) button
 
 In client.js
 - [ ] Add in event listener to capture input as an object
