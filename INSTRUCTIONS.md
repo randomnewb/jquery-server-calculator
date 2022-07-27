@@ -1,3 +1,47 @@
+## To-Do
+
+# Initialization To-Do
+- [ ] Setup file directory
+- [ ] Setup index.html, client.js, server.js, style.css
+- [ ] Source js and css files
+- [ ] `npm init --y`
+- [ ] `npm install express`
+
+## GET Requests
+
+- Start on server with placeholder data
+- Create a GET rotue `/yourRoute`
+- Test the route in the browser
+- Write AJAX request on the client
+- Append to the DOM
+
+## POST requests
+
+- Create an HTML input fields and submit button
+- Add click handlers to the client.js
+- Write AJAX request on client
+- Create a POST route on server `/yourRoute`
+- Add new object to our array
+
+# User Input and Interaction To-Do
+
+In index.html
+- [ ] Create two input fields 
+- [ ] In-between the input fields, add 4 basic operations (+ - * /)
+- [ ] Add a submit (`=`) button
+
+In client.js
+- [ ] Add in event listener to capture input as an object
+
+In server.js
+- [ ] Add logic on server to compute numbers
+- [ ] Add a GET request
+- [ ] Add a POST request
+
+# History To-Do
+- [ ] Display list of previous calculations on page when using a GET request
+- [ ] Update calculation list 
+
 # Weekend Challenge: Server Side Calculator
 
 Welcome to the weekend challenge!
@@ -17,6 +61,8 @@ Build out the server-side logic to compute the numbers as appropriate. The serve
 Keep a historical record of all math operations and solutions on the server. Display a list of all previous calculations on the page when it loads using a GET request. Update the list when a new calculation is made.
 
 > NOTE: History should exist even after refreshing the page. It's expected that the history will go away after restarting the server. We'll talk about long term data storage next week.
+
+
 
 ---
 ![base mode interface](images/baseMode.png)
