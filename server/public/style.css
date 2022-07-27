@@ -1,3 +1,7 @@
 body {
     background-color: lightskyblue;
 }
+
+.clickedButton {
+    background-color: orange;
+}

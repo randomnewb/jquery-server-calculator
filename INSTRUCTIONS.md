@@ -34,7 +34,7 @@ In index.html
 - [x] Add a submit (`=`) button
 
 In client.js
-- [ ] Add in event listener to capture input as an object
+- [x] Add in event listener to capture input as an object
 
 In server.js
 - [ ] Add logic on server to compute numbers
