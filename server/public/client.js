@@ -10,13 +10,18 @@ function readyNow() {
 let expression = '';
 
 function sendCalculation() {
-    console.log('Calculation sent!');
-    console.log(expression);
-    const newCalculation = {
-        inputOne: $('#inputOne').val(),
-        inputTwo: $('#inputTwo').val(),
-        expression: expression,
-    };
+    $.ajax({
+        type:'POST',
+        url: '/calculation',
+        data: {
+            inputOne: $('#inputOne').val(),
+            inputTwo: $('#inputTwo').val(),
+            expression: expression,
+        }
+    }).then(function (response) {
+        console.log(response);
+        getCalculation;
+    })
 };
 
 function holdExpression() {
@@ -26,3 +31,21 @@ function holdExpression() {
     console.log('In hold expression',expression);
     return expression;
 }
+
+function getCalculation() {
+    $.ajax({
+        type: 'GET',
+        url: '/calculation'
+    }).then(function (response) {
+        console.log(response);
+        $('#history').append(`
+            <div class="calculation-history">
+                ${response} 
+            </div>
+        `);
+        $('#inputOne').val('');
+        $('#inputTwo').val('');
+        $('.expression.').removeClass("clickedButton");
+    });
+
+};

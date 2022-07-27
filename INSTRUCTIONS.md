@@ -13,7 +13,7 @@
 ## GET Requests
 
 - Start on server with placeholder data
-- Create a GET rotue `/yourRoute`
+- Create a GET route `/yourRoute`
 - Test the route in the browser
 - Write AJAX request on the client
 - Append to the DOM
