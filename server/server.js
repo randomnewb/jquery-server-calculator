@@ -39,6 +39,11 @@ app.get("/calculation", (req, res) => {
   res.send(calculationListArray);
 });
 
+app.post("/delete", (req, res) => {
+    calculationListArray = [];
+    res.send(calculationListArray);
+})
+
 app.listen(port, () => {
   console.log("listening on port", port);
 });

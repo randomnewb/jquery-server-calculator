@@ -6,6 +6,7 @@ function readyNow() {
   $("body").on("click", ".expression", holdExpression);
   $("body").on("click", "#submit", sendCalculation);
   $("body").on("click", "#clear", clearFields);
+  $("body").on("click", "#reset", resetMemory);
 
 }
 
@@ -25,6 +26,7 @@ function sendCalculation() {
   }).then(function (response) {
     console.log(response);
     getCalculation();
+    $("#memory").text('');
     console.log("after getCalculation");
   });
 }
@@ -54,10 +56,10 @@ function getCalculation() {
     type: "GET",
     url: "/calculation",
   }).then(function (response) {
-    $(".expression").removeClass("clickedButton");
-    $("#inputOne").val("");
-    $("#inputTwo").val("");
-    // clearFields();
+    // $(".expression").removeClass("clickedButton");
+    // $("#inputOne").val("");
+    // $("#inputTwo").val("");
+    clearFields();
     console.log(response);
     console.log("in getCalc then response");
     $("#history").empty();
@@ -79,4 +81,15 @@ function clearFields() {
     $(".expression").removeClass("clickedButton");
     $("#inputOne").val("");
     $("#inputTwo").val("");
+}
+
+function resetMemory() {
+    $.ajax({
+        type: 'POST',
+        url: '/delete',
+    }).then(function (response) {
+        console.log('Memory cleared')
+        $("#memory").text('Memory cleared');
+        $("#history").empty();
+    });
 }
