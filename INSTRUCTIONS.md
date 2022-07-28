@@ -37,13 +37,13 @@ In client.js
 - [x] Add in event listener to capture input as an object
 
 In server.js
-- [ ] Add logic on server to compute numbers
-- [ ] Add a GET request
-- [ ] Add a POST request
+- [x] Add logic on server to compute numbers
+- [x] Add a GET request
+- [x] Add a POST request
 
 # History To-Do
-- [ ] Display list of previous calculations on page when using a GET request
-- [ ] Update calculation list 
+- [x] Display list of previous calculations on page when using a GET request
+- [x] Update calculation list 
 
 # Weekend Challenge: Server Side Calculator
 
