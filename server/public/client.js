@@ -3,6 +3,10 @@ $(readyNow);
 function readyNow() {
   console.log("Ready");
 
+  // Show the history of calculations on page load, even after refreshing
+  getCalculation();
+
+  // Event handlers when user clicks the various buttons
   $("body").on("click", ".expression", holdExpression);
   $("body").on("click", "#submit", checkInput);
   $("body").on("click", "#clear", clearFields);
@@ -13,11 +17,16 @@ function readyNow() {
 let expression = "";
 let clickedExpression = "";
 
+/**
+ * A function that alerts the user when an input field 
+ * has not been filled out or an expression has not been selected
+ */
+
 function checkInput() {
     // console.log(($('#calculator').children('.clickedButton').length))
     // console.log($('#calculator').children('.input').val());
     if ((!$('#calculator').children('.input').val()) || ($('#calculator').children('.clickedButton').length) === 0) {
-        console.log('Fill in input');
+        alert('Please make sure all input fields are complete and you chose an expression');
         // $(this).parents('p').addClass('warning')
     } else {
         sendCalculation();
